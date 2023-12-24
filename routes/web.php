@@ -101,6 +101,16 @@ Route::post('StoreUpdateexpensive' ,[expensiveController::class , 'StoreUpdateex
 
 
 // This routes related to the Sell........................................................
+Route::get('show_employee' ,[EmployeeController::class , 'show_employee'])->name('show_employee');
+Route::get('addemployee' ,[EmployeeController::class , 'addemployee']);
+Route::post('saveemployee' ,[EmployeeController::class , 'saveemployee']);
+Route::get('employeedelete/{employee_id}' ,[EmployeeController::class , 'employeedelete']);
+Route::get('employeeEdit/{employee_id}' ,[EmployeeController::class , 'employeeEdit']);
+Route::post('StoreUpdateemployee' ,[EmployeeController::class , 'StoreUpdateemployee']);
+// End of Routes...........................................................................
+
+
+// This routes related to the Sell........................................................
 Route::get('show_salary' ,[SalariesController::class , 'show_salary'])->name('show_salary');
 Route::get('addsalary' ,[SalariesController::class , 'addsalary']);
 Route::post('savesalary' ,[SalariesController::class , 'savesalary']);
@@ -108,7 +118,6 @@ Route::get('salarydelete/{salary_id}' ,[SalariesController::class , 'salarydelet
 Route::get('salarytedit/{salary_id}' ,[SalariesController::class , 'salaryEdit']);
 Route::post('StoreUpdatesalary' ,[SalariesController::class , 'StoreUpdatesalary']);
 // End of Routes...........................................................................
-
 
 
 

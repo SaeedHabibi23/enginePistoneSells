@@ -60,7 +60,6 @@ class EmployeeController extends Controller
         $Employee->EmployeeAddress = request('EmployeeAddress');
         $Employee->save();
         return redirect(route('show_employee'))->with('status' , 'عملیه ادیت کردن بصورت موفقانه انجام شد');
-
     }
 
 

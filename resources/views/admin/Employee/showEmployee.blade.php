@@ -52,7 +52,7 @@
 
 
             <td> <a href="/employeedelete/{{ $Employe->employee_id }}"  >delete</a></td>
-<td> <a href="/employeetedit/{{ $Employe->employee_id }}"  >update</a></td>
+<td> <a href="/employeeEdit/{{ $Employe->employee_id }}"  >update</a></td>
 
         </tr>
 @endforeach

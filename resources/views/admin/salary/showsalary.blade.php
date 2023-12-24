@@ -38,21 +38,26 @@
         <th> عمل </th>
 
         </tr>
-        @foreach($Product as $Produc)
+        @foreach($Salary as $Salar)
+
         <tr>
-            <td> {{$Produc->employeeName}}</td>
-            <td> {{$Produc->startdate}}</td>
-            <td> {{$Produc->enddate}}</td>
+
+
+            <td> {{$Salar->employeeName}}</td>
+
+
+            <td> {{$Salar->startdate}}</td>
+            <td> {{$Salar->enddate}}</td>
             
-            <td> {{$Produc->mount}}</td>
-            <td> {{$Produc->description}}</td>
+            <td> {{$Salar->mount}}</td>
+            <td> {{$Salar->description}}</td>
             
 
 
 
 
-            <td> <a href="/Producdelete/{{ $Produc->product_id }}"  >delete</a></td>
-<td> <a href="/productedit/{{ $Produc->product_id }}"  >update</a></td>
+            <td> <a href="/salarydelete/{{ $Salar->salary_id }}"  >delete</a></td>
+<td> <a href="/salarytedit/{{ $Salar->salary_id }}"  >update</a></td>
 
         </tr>
 @endforeach
