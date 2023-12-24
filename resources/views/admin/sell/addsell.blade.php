@@ -28,6 +28,7 @@
    <div class="col-lg-6">
    محصول یک 
    <select name="ProductOne" id="" class="form-control">
+
         @foreach($data['Product'] as $Produc)
         <option value="{{$Produc->product_id}}">  {{$Produc->Product_Name}}  </option>
         @endforeach
@@ -188,7 +189,7 @@
     
     
 
- <input type="submit" value="sende" class="btn btn-primary" style="margin-top:18px;">
+ <input type="submit" value="ذخیره" class="btn btn-primary" style="margin-top:18px;">
 
 </form>
 </div>

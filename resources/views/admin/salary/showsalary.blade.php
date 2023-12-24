@@ -56,8 +56,8 @@
 
 
 
-            <td> <a href="/salarydelete/{{ $Salar->salary_id }}"  >delete</a></td>
-<td> <a href="/salarytedit/{{ $Salar->salary_id }}"  >update</a></td>
+            <td> <a href="/salarydelete/{{ $Salar->salary_id }}"  >حذف کردن</a></td>
+<td> <a href="/salarytedit/{{ $Salar->salary_id }}"  >ویراییش</a></td>
 
         </tr>
 @endforeach

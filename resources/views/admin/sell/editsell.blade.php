@@ -189,7 +189,7 @@
     
     
 
- <input type="submit" value="sende" class="btn btn-primary" style="margin-top:18px;">
+ <input type="submit" value="ذخیره" class="btn btn-primary" style="margin-top:18px;">
 
 </form>
 </div>

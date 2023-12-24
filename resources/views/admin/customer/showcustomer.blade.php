@@ -52,8 +52,8 @@
 
 
 
-            <td> <a href="/customerdelete/{{ $Customer->customer_id }}"  >delete</a></td>
-<td> <a href="/customeredit/{{ $Customer->customer_id }}"  >update</a></td>
+            <td> <a href="/customerdelete/{{ $Customer->customer_id }}"  >حذف کردن</a></td>
+<td> <a href="/customeredit/{{ $Customer->customer_id }}"  >ادیت کردن</a></td>
 
         </tr>
 @endforeach

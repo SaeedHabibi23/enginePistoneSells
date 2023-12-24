@@ -77,7 +77,7 @@
 
 
 
-<td> <a href="/selledit/{{ $Produc->sell_id }}"  >ادیت</a></td>
+<td> <a href="/selledit/{{ $Produc->sell_id }}"  >ویراییش</a></td>
 
         </tr>
 @endforeach

@@ -50,8 +50,8 @@
 
 
 
-            <td> <a href="/Producdelete/{{ $Produc->product_id }}"  >  details  </a></td>
-<td> <a href="/productedit/{{ $Produc->product_id }}"  >update</a></td>
+            <td> <a href="/Producdelete/{{ $Produc->product_id }}"  >  حذف کردن  </a></td>
+<td> <a href="/productedit/{{ $Produc->product_id }}"  >ویراییش</a></td>
 
         </tr>
 @endforeach

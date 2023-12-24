@@ -38,7 +38,7 @@ http://www.templatemo.com/preview/templatemo_428_kool_store
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="top-header-left">
-                            <a href="{{url('show')}}">صفحه اصلی</a>
+                            <a href="{{url('mainpage')}}">صفحه اصلی</a>
                         </div> <!-- /.top-header-left -->
                     </div> <!-- /.col-md-6 -->
                     <div class="col-md-6 col-sm-6">

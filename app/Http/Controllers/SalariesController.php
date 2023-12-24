@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Salary;
 use App\Models\Employee;
+use App\Models\expensive;
 class SalariesController extends Controller
 {
    
@@ -36,6 +37,12 @@ class SalariesController extends Controller
         $emoloyeeid = request('employee_id');
         $Employee = Employee::find($emoloyeeid);
         $Employee->remainSalary = $Employee->remainSalary - $money;
+
+        $expensive = new expensive();
+        $expensive->price = $Salary->mount;
+        $expensive->date = $Salary->enddate;
+        $expensive->description = 'این مقدار مصارف برای معاش کارمند مصرف شد';
+        $expensive->save();
         $Employee->save();
         $Salary->save();
         return redirect()->back()->with('status' , 'معاش بصورت موفقانه ذخیره شد');

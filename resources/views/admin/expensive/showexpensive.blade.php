@@ -43,8 +43,8 @@
             <td> {{$expensiv->description}}</td>
 
 
-            <td> <a href="/expensivdelete/{{ $expensiv->expensive_id }}"  >delete</a></td>
-<td> <a href="/expensivtedit/{{ $expensiv->expensive_id }}"  >update</a></td>
+            <td> <a href="/expensivdelete/{{ $expensiv->expensive_id }}"  >حذف کردن</a></td>
+<td> <a href="/expensivtedit/{{ $expensiv->expensive_id }}"  >ویراییش</a></td>
 
         </tr>
 @endforeach

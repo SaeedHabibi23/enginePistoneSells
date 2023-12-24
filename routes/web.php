@@ -10,6 +10,8 @@ use App\Http\Controllers\EarningController;
 use App\Http\Controllers\SellController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,10 +34,16 @@ Route::get('/stocks',[StockController::class,'index']);
 Route::post('product_insert1' ,[productController::class , 'store']);
 Route::get('show' ,[productController::class , 'show']);
 
-Route::get('contact' ,[productController::class , 'contact']);
-Route::get('productdetail' ,[productController::class , 'productdetail']);
 
+Route::get('/contact' ,function(){
 
+    return view('master_frount/contact');
+});
+
+Route::get('/productdetail' ,function(){
+
+    return view('master_frount/table');
+});
 
 
 

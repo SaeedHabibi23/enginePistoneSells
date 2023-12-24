@@ -7,7 +7,7 @@ use App\Models\Sell;
 use App\Models\Product;
 use App\Models\Customers;
 use Carbon\Carbon;
-
+use App\Models\Earnings;
 
 class SellController extends Controller
 {
@@ -65,6 +65,7 @@ class SellController extends Controller
         $productoneid = request('ProductOne');
 
         $Product = Product::where('product_id' , '=' , $productoneid)->first();
+        
         $ProductName = $Product->Product_Name;
 
         $pricesoldone = $Product->product_soldprice;
@@ -277,6 +278,11 @@ class SellController extends Controller
             $Sell->customerName = request('customerName');
         }
         $Sell->totalprice = $Totalallprice;
+        $Earnings = new Earnings();
+        $Earnings->price = $Totalallprice;
+        $Earnings->date = $Sell->product_date_sold;
+        $Earnings->description = 'این مقدار عاید از فروش اقلام پرزه فروشی بدست آمده است';
+        $Earnings->save();
 
         $Sell->save();
         return redirect()->back()->with('status' , 'فروش بصورت موفقانه انجام شد');
@@ -535,6 +541,10 @@ class SellController extends Controller
             $Sell->customerName = request('customerName');
         }
         $Sell->totalprice = $Totalallprice;
+
+      
+
+
 
         $Sell->save();
         return redirect(route('showsell'))->with('status' , 'عملیه ادیت کردن بصورت موفقانه انجام شد');

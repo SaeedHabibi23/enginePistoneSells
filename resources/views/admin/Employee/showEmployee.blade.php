@@ -51,8 +51,8 @@
 
 
 
-            <td> <a href="/employeedelete/{{ $Employe->employee_id }}"  >delete</a></td>
-<td> <a href="/employeeEdit/{{ $Employe->employee_id }}"  >update</a></td>
+            <td> <a href="/employeedelete/{{ $Employe->employee_id }}"  >حذف کردن</a></td>
+<td> <a href="/employeeEdit/{{ $Employe->employee_id }}"  >ویراییش</a></td>
 
         </tr>
 @endforeach

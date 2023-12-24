@@ -37,7 +37,7 @@
 
 
  
- <input type="submit" value="sende" class="btn btn-primary">
+ <input type="submit" value="ذخیره" class="btn btn-primary">
 
 </form>
 </div>

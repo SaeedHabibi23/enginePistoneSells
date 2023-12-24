@@ -43,8 +43,8 @@
             <td> {{$Earning->description}}</td>
 
 
-            <td> <a href="/Earningdelete/{{ $Earning->earning_id }}"  >delete</a></td>
-<td> <a href="/Earningtedit/{{ $Earning->earning_id }}"  >update</a></td>
+            <td> <a href="/Earningdelete/{{ $Earning->earning_id }}"  >حذف کردن</a></td>
+<td> <a href="/Earningtedit/{{ $Earning->earning_id }}"  >ادیت کردن</a></td>
 
         </tr>
 @endforeach

@@ -53,7 +53,7 @@
                 <th>تاریخ</th>
                 </thead>
                 <tbody>
-                    @if($data['Sell']->ProductOne != '')
+                    @if($data['Sell']->ProductOne != ''  && $data['Sell']->countone != 0)
                     <tr>
                         <td>{{$data['Sell']->ProductOne}}</td>
                         <td>{{$data['Sell']->countone}}</td>
@@ -62,7 +62,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Producttwo != '')
+                    @if($data['Sell']->Producttwo != '' && $data['Sell']->counttwo != 0)
                     <tr>
                         <td>{{$data['Sell']->Producttwo}}</td>
                         <td>{{$data['Sell']->counttwo}}</td>
@@ -71,7 +71,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Productthree != '')
+                    @if($data['Sell']->Productthree != '' && $data['Sell']->countthree != 0)
                     <tr>
                         <td>{{$data['Sell']->Productthree}}</td>
                         <td>{{$data['Sell']->countthree}}</td>
@@ -80,7 +80,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Productfour != '')
+                    @if($data['Sell']->Productfour != '' && $data['Sell']->countfour != 0)
                     <tr>
                         <td>{{$data['Sell']->Productfour}}</td>
                         <td>{{$data['Sell']->countfour}}</td>
@@ -89,16 +89,8 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->ProductOne != '')
-                    <tr>
-                        <td>{{$data['Sell']->ProductOne}}</td>
-                        <td>{{$data['Sell']->countone}}</td>
-                        <td>{{$data['Sell']->priceonefe}}</td>
-                        <td>{{$data['Sell']->ProductcountOne}}</td>
-                        <td>{{$data['Sell']->product_date_sold}}</td>
-                    </tr>
-                    @endif
-                    @if($data['Sell']->Productfive != '')
+              
+                    @if($data['Sell']->Productfive != '' && $data['Sell']->countfive != 0)
                     <tr>
                         <td>{{$data['Sell']->Productfive}}</td>
                         <td>{{$data['Sell']->countfive}}</td>
@@ -107,7 +99,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Productsix != '')
+                    @if($data['Sell']->Productsix != ''  && $data['Sell']->countsix != 0)
                     <tr>
                         <td>{{$data['Sell']->Productsix}}</td>
                         <td>{{$data['Sell']->countsix}}</td>
@@ -116,7 +108,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Productseven != '')
+                    @if($data['Sell']->Productseven != ''  && $data['Sell']->countseven != 0)
                     <tr>
                         <td>{{$data['Sell']->Productseven}}</td>
                         <td>{{$data['Sell']->countseven}}</td>
@@ -125,7 +117,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Producteight != '')
+                    @if($data['Sell']->Producteight != ''  && $data['Sell']->counteight != 0)
                     <tr>
                         <td>{{$data['Sell']->Producteight}}</td>
                         <td>{{$data['Sell']->counteight}}</td>
@@ -134,7 +126,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Productnine != '')
+                    @if($data['Sell']->Productnine != ''  && $data['Sell']->countnine != 0)
                     <tr>
                         <td>{{$data['Sell']->Productnine}}</td>
                         <td>{{$data['Sell']->countnine}}</td>
@@ -143,7 +135,7 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
-                    @if($data['Sell']->Productten != '')
+                    @if($data['Sell']->Productten != ''  && $data['Sell']->countten != 0)
                     <tr>
                         <td>{{$data['Sell']->Productten}}</td>
                         <td>{{$data['Sell']->countten}}</td>
@@ -152,6 +144,10 @@
                         <td>{{$data['Sell']->product_date_sold}}</td>
                     </tr>
                     @endif
+                    <tr>
+                        <td colspan="5" class="text-center"> قیمت مجموع: {{$data['Sell']->totalprice}}</td>
+                        
+                    </tr>
                 </tbody>
             </table>
 

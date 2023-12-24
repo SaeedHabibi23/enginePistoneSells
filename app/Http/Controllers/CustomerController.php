@@ -4,11 +4,31 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customers;
+use App\Models\Earnings;
+use App\Models\expensive;
+use App\Models\Employee;
+use App\Models\Product;
 
 class CustomerController extends Controller
 {
     public function mainpage(){
-        return view('admin/mainpage');
+        $Earnings = Earnings::all();
+        $Customers = Customers::all();
+        $expensive = expensive::all();
+        $Employee = Employee::all();
+        $Product = Product::all();
+
+        $data = [
+            'Earnings' => $Earnings , 
+            'Customers' => $Customers , 
+            'expensive' => $expensive , 
+            'Employee' => $Employee , 
+            'Product' => $Product , 
+        ];
+
+
+
+        return view('admin/mainpage' , compact('data'));
     }
     public function showcustomers(){
         $Customers = Customers::all();
