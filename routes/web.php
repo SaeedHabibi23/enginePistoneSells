@@ -78,6 +78,9 @@ Route::post('savesell' ,[SellController::class , 'savesell']);
 Route::get('Producdelete/{sell_id}' ,[SellController::class , 'selldelete']);
 Route::get('selledit/{sell_id}' ,[SellController::class , 'selledit']);
 Route::post('StoreUpdatesell' ,[SellController::class , 'StoreUpdatesell']);
+Route::get('seedetails/{sell_id}' ,[SellController::class , 'seedetails']);
+
+
 // End of Routes...........................................................................
 
 // This routes related to the Sell........................................................

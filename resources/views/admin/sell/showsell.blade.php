@@ -30,47 +30,37 @@
           </div>
     <table class="table table-bordered">
         <tr>
-        <th>تعداد</th> 
-        <th>تاریخ فروش</th>
+         <th>تاریخ فروش</th>
         <th> محصول یک </th>
         <th> محصول دو </th>
         <th>محصول سه</th> 
-        <th>محصول سه</th>
-        <th> محصول چهار </th>
-        <th> محصول پنج </th>
-        <th>محصول شش</th> 
-        <th>محصول هفت</th>
-        <th> محصول هشت </th>
-        <th> محصول نه </th>
-        <th>محصول ده</th> 
-        <th>نام محصول</th>
+         <th> محصول چهار </th>
+         
+        <th> نام مشتری </th>
         <th> نام مشتری </th>
         <th> عمل </th>
 
         </tr>
-        @foreach($Sell as $Produc)
+        @foreach($data['Sell'] as $Produc)
         <tr>
-            <td> {{$Produc->product_count}}</td>
-            <td> {{$Produc->product_date_sold}}</td>
+             <td> {{$Produc->product_date_sold}}</td>
             <td> {{$Produc->ProductOne}}</td>
             
             <td> {{$Produc->Producttwo}}</td>
             <td> {{$Produc->Productthree}}</td>
             <td> {{$Produc->Productfour}}</td>
-            <td> {{$Produc->Productfive}}</td>
-            
-            <td> {{$Produc->Productsix}}</td>
-
-            
-            <td> {{$Produc->Productseven}}</td>
-            
-            <td> {{$Produc->Producteight}}</td>
-            <td> {{$Produc->Productnine}}</td>
-            <td> {{$Produc->Productten}}</td>
-            <td> {{$Produc->product_id}}</td>
-            
+             
             <td> {{$Produc->customerName}}</td>
 
+   
+
+            <td>
+            @foreach($data['Customers'] as $customer)
+            @if($customer->customer_id == $Produc->customer_id)
+                {{$customer->customerName}}
+            @endif
+        @endforeach    
+        </td>
 
 
 
@@ -83,12 +73,11 @@
 
 
 
-            <td> <a href="/Producdelete/{{ $Produc->product_id }}"  >جزییات</a></td>
+            <td> <a href="/seedetails/{{ $Produc->sell_id }}"  >جزییات</a></td>
 
 
 
-            <td> <a href="/Producdelete/{{ $Produc->product_id }}"  >delete</a></td>
-<td> <a href="/productedit/{{ $Produc->product_id }}"  >update</a></td>
+<td> <a href="/selledit/{{ $Produc->sell_id }}"  >ادیت</a></td>
 
         </tr>
 @endforeach
