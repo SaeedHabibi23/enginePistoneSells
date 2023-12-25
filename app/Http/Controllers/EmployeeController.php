@@ -44,6 +44,8 @@ class EmployeeController extends Controller
         $Employee = Employee::find($employee_id);
         return view('admin/Employee/editEmployee' , compact('Employee'));
     }
+    // This function is used to save edit
+
     public function StoreUpdateemployee(Request $request){
         $request->validate([
             'employeeName' => "required" , 

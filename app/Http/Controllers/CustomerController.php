@@ -66,6 +66,7 @@ class CustomerController extends Controller
         // return $Customers->customer_id;
         return view('admin/customer/editcustomer' , compact('Customers'));
     }  
+// This function is used to save edit
 
     public function StoreUpdate(Request $request){
         $request->validate([

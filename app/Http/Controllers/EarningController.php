@@ -40,6 +40,8 @@ public function EarningEdit($earning_id){
     $Earnings = Earnings::find($earning_id);
     return view('admin/Earnings/editEarnings' , compact('Earnings'));
 }
+
+// This function is used to save edit
 public function StoreUpdateEarning(Request $request){
     $request->validate([
         'price' => "nullable" , 
